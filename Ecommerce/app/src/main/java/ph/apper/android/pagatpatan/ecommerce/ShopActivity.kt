@@ -1,6 +1,8 @@
 package ph.apper.android.pagatpatan.ecommerce
 
+import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.list_items
@@ -16,7 +18,7 @@ class ShopActivity : AppCompatActivity() {
         setContentView(R.layout.shop_cart)
 
         btn_checkout.setOnClickListener{
-
+            showDialog()
         }
 
         myList.add("Notebook")
@@ -28,4 +30,22 @@ class ShopActivity : AppCompatActivity() {
         list_items.adapter = ListAdapter(this, myList)
         list_items.layoutManager = LinearLayoutManager(this)
     }
+
+    fun showDialog(){
+        val builder:AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle("Ecommerce")
+        builder.setMessage("Thank you for purchasing!")
+        builder.setIcon(R.mipmap.ic_launcher)
+
+        builder.setPositiveButton("OK", {dialog, which -> dialog.dismiss(); mainPage()})
+
+        val alertDialog: AlertDialog = builder.create()
+        alertDialog.show()
+    }
+
+    fun mainPage() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
+
 }
