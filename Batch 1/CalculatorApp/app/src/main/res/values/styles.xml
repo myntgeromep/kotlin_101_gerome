@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="button_style">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/margin_eighth</item>
+        <item name="android:layout_marginBottom">@dimen/margin_sixteen</item>
+        <item name="android:layout_marginEnd">@dimen/margin_eighth</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:background">@drawable/circle_button_style</item>
+    </style>
+
+    <style name="button_operation">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/margin_eighth</item>
+        <item name="android:layout_marginBottom">@dimen/margin_sixteen</item>
+        <item name="android:layout_marginEnd">@dimen/margin_eighth</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/circle_button_operation</item>
+    </style>
+
+    <style name="button_equal">
+        <item name="android:layout_width">85dp</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/margin_eighth</item>
+        <item name="android:layout_marginBottom">@dimen/margin_sixteen</item>
+        <item name="android:layout_marginEnd">@dimen/margin_eighth</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/circle_button_equal</item>
+    </style>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_todo"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="16dp"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_todo"/>
+
+    <EditText
+        android:id="@+id/et_todo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="New To-Do"
+        android:layout_margin="16dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="16dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/circle_button"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:text="+"/>
+    </RelativeLayout>
+
+</LinearLayout>
