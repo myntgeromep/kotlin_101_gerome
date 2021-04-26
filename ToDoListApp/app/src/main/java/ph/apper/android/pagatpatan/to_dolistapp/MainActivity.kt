@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun displayDataInfo() {
         val db = mDBHelper.readableDatabase
 

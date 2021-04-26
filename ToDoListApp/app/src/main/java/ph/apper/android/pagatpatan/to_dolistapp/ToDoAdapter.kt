@@ -8,12 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import ph.apper.android.pagatpatan.to_dolistapp.data.ToDo
 
 class ToDoAdapter(private var todoList : MutableList<ToDo>) : RecyclerView.Adapter<ToDoAdapter.ToDoHolder>() {
+
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ToDoAdapter.ToDoHolder {
         val context = viewGroup.context
         val inflater = LayoutInflater.from(context)
-        val shouldAttachToParentImmediately = false
 
-        val view = inflater.inflate(R.layout.item_todo, viewGroup, shouldAttachToParentImmediately)
+        val view = inflater.inflate(R.layout.item_todo, viewGroup, false)
         return ToDoHolder(view)
     }
 
