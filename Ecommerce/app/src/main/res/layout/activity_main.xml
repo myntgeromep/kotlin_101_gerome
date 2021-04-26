@@ -10,8 +10,19 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_items"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:padding="16dp"
-        android:background="@drawable/rv_border" />
+        android:layout_height="500dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/et_border"
+            android:text="shop" />
+    </RelativeLayout>
 
 </LinearLayout>

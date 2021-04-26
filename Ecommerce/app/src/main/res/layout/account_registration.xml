@@ -35,7 +35,8 @@
         <Spinner
             android:id="@+id/spinner_salutation"
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"/>
     </RelativeLayout>
 
     <RelativeLayout

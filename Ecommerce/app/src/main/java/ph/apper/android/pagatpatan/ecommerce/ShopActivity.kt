@@ -1,22 +1,22 @@
 package ph.apper.android.pagatpatan.ecommerce
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.list_items
+import kotlinx.android.synthetic.main.shop_cart.*
 import ph.apper.android.pagatpatan.ecommerce.adapters.ListAdapter
 
-class MainActivity : AppCompatActivity() {
+class ShopActivity : AppCompatActivity() {
 
     var myList = ArrayList<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.shop_cart)
 
-        btn_shop.setOnClickListener{
-            shopPage()
+        btn_checkout.setOnClickListener{
+
         }
 
         myList.add("Notebook")
@@ -27,10 +27,5 @@ class MainActivity : AppCompatActivity() {
 
         list_items.adapter = ListAdapter(this, myList)
         list_items.layoutManager = LinearLayoutManager(this)
-    }
-
-    fun shopPage() {
-        val intent = Intent(this, ShopActivity::class.java)
-        startActivity(intent)
     }
 }
