@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import ph.apper.android.pagatpatan.to_dolistapp.data.DBHelper
-import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.DiaryEntry.COLUMN_TITLE
-import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.DiaryEntry.TABLE_NAME
-import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.DiaryEntry._ID
+import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.ToDoEntry.COLUMN_TITLE
+import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.ToDoEntry.TABLE_NAME
+import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.ToDoEntry._ID
 import ph.apper.android.pagatpatan.to_dolistapp.data.ToDo
 
 class MainActivity : AppCompatActivity() {
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         if (rowId.equals(-1)) {
             Toast.makeText(this, "Problem inserting new task", Toast.LENGTH_SHORT).show()
         } else {
-            Toast.makeText(this, "New task #$rowId has been added", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "New task has been added", Toast.LENGTH_SHORT).show()
         }
     }
 

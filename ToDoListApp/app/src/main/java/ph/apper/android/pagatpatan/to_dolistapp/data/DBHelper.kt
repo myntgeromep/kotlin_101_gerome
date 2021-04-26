@@ -3,9 +3,9 @@ package ph.apper.android.pagatpatan.to_dolistapp.data
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.DiaryEntry.COLUMN_TITLE
-import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.DiaryEntry.TABLE_NAME
-import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.DiaryEntry._ID
+import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.ToDoEntry.COLUMN_TITLE
+import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.ToDoEntry.TABLE_NAME
+import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.ToDoEntry._ID
 
 class DBHelper(context : Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 

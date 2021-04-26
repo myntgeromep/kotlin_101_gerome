@@ -4,7 +4,7 @@ import android.provider.BaseColumns
 
 object DatabaseManager {
 
-    object DiaryEntry : BaseColumns{
+    object ToDoEntry : BaseColumns{
 
         const val TABLE_NAME = "todolist"
         const val _ID = BaseColumns._ID

@@ -5,15 +5,32 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.item_todo.view.*
+import ph.apper.android.pagatpatan.to_dolistapp.data.DBHelper
+import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.ToDoEntry.TABLE_NAME
+import ph.apper.android.pagatpatan.to_dolistapp.data.DatabaseManager.ToDoEntry._ID
 import ph.apper.android.pagatpatan.to_dolistapp.data.ToDo
 
 class ToDoAdapter(private var todoList : MutableList<ToDo>) : RecyclerView.Adapter<ToDoAdapter.ToDoHolder>() {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ToDoAdapter.ToDoHolder {
+    override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): ToDoAdapter.ToDoHolder {
         val context = viewGroup.context
         val inflater = LayoutInflater.from(context)
 
         val view = inflater.inflate(R.layout.item_todo, viewGroup, false)
+
+        view.delete_button.setOnClickListener{
+            val mDBHelper = DBHelper(view.context)
+            val db = mDBHelper.writableDatabase
+
+            val selection = "$_ID = ?"
+            val selectionArgs = arrayOf("${(todoList[position].id)}")
+
+            db.delete(TABLE_NAME, selection, selectionArgs)
+            todoList.removeAt(position)
+            notifyDataSetChanged()
+        }
+
         return ToDoHolder(view)
     }
 
