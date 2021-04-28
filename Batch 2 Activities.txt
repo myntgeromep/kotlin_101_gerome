@@ -1,0 +1,3 @@
+I've uploaded sir my files for batch 2 activities in github.
+
+git@github.com:myntgeromep/kotlin_101_gerome.git
