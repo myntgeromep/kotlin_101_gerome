@@ -10,6 +10,8 @@ object RetrofitClient {
     private val AUTH = "Basic "+ Base64.encodeToString("root:123456".toByteArray(), Base64.NO_WRAP)
 
     // Laptop/PC private IP address
+    // GET ALL USERS: http://<privateIP>/myapi/public/allusers
+    // CREATE USER: http://<privateIP>/myapi/public/createuser
     private const val BASE_URL = "http://192.168.1.56/myapi/public/"
 
     private val okHttpClient = OkHttpClient.Builder()
